@@ -53,6 +53,4 @@ def play_and_record():
 
 
 if __name__ == '__main__':
-    print "simple python plugin"
-    sys.exit(1)
     play()
