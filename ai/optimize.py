@@ -1,13 +1,10 @@
-import time
-
 import numpy as np
-from scipy.optimize import fmin_slsqp, fmin_bfgs, fmin, leastsq, fmin_ncg
-from scipy.optimize import fmin_tnc
+from scipy.optimize import fmin
 
 from ai.keep_low import KeepLow
 from ai.keep_low_twice import KeepLowTwice
-from recorder import Recorder
 from game_objects.field import NBlox
+from recorder import Recorder
 
 
 def keep_low_at_once_func(x, *args):

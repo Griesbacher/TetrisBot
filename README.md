@@ -1,8 +1,6 @@
 # Tetris Bot
 **Disclaimer:** This is a fun/self educational project to play with Computer Vision and simple AI and does not aim to harm or manipulate any games.
 
-*The code has nearly no docs and still a lot of "tests", it maybe cleaned up in the future ;-)*
-
 ## Demo
 
 The following Youtube video shows the bot in action:

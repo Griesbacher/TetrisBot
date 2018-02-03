@@ -290,15 +290,3 @@ class U(Block):
     def __str__(self):
         return "%s - %s" % (self.__class__.__name__, self.err)
 
-
-if __name__ == '__main__':
-    print list(TNoseUp().rotations_clock_wise())
-    print list(TNoseUp().rotations_counter_clock_wise())
-    print list(O().rotations_clock_wise())
-    print Block.get_random_block()
-    # from game_objects.field import Field
-    # from game_objects.control import Moveset
-
-    # for b in Block.valid_blocks:
-    #    print Field().add_block(b(), [Moveset.DROP])[0]
-    #    print b()

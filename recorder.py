@@ -1,8 +1,6 @@
 import os
 import pickle
 
-import copy
-
 from game_objects.field import NBlox
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -66,6 +64,4 @@ class Recorder:
 
 
 if __name__ == '__main__':
-    # for b in Recorder(NBlox.get_width()).play_all(NBlox.get_width()):
-    # print b
     print len(list(Recorder(NBlox.get_width()).play_all_at_once(NBlox.get_width())))

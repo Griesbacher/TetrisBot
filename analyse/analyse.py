@@ -6,7 +6,6 @@ import numpy as np
 from PIL import Image
 
 import game_objects.blocks as shapes
-from debug import show_image
 
 
 class Analyser:
@@ -20,7 +19,6 @@ class Analyser:
 
     def _update_block_size(self, block_size):
         pass
-        #self._block_size = (self._block_size + float(block_size)) / 2
 
     def get_block_size(self):
         return self._block_size
@@ -64,8 +62,6 @@ class Analyser:
         # type: (Image.Image) -> shapes.Block
         gray_img = cv2.cvtColor(np.asarray(image), cv2.COLOR_BGR2GRAY)
         bin_img = img_filter(gray_img)
-        #show_image(gray_img)
-        #show_image(bin_img)
         features = cv2.goodFeaturesToTrack(bin_img, 15, 0.05, int(self._block_size * 0.5))
         if features is None:
             return shapes.U("Could not detect any feature")
@@ -314,13 +310,3 @@ def test_folder(path, f=None):
         else:
             print filename, test_analyser.get_shape_with_filter(Image.open(os.path.join(path, filename)), f)
         break
-
-
-if __name__ == '__main__':
-    a = Analyser(30)
-    # print a.get_shape(Image.open("../test/img/blocks/friends/T.png"))
-    # print a.get_shape_with_filter(Image.open("../test/img/blocks/nblox/S.png"), a.default_filter)
-    # print a.get_shape(Image.open("../test/img/blocks/nblox/field.png"))
-    test_folder("../test/img/blocks/friends/")
-    # test_folder("../test/img/blocks/nblox/")
-    # test_folder("../test/img/blocks/quadrapassel/")

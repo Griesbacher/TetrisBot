@@ -236,28 +236,3 @@ Quadrapssel = Field(width=14, height=15, new_block_index=6)
 
 def tuple_add(a, b):
     return tuple(map(operator.add, a, b))
-
-
-if __name__ == '__main__':
-    """
-    f1, i, h = Field().add_block(blocks.TNoseDown(), [Moveset.DROP])
-    f2, i, h = f1.add_block(blocks.TNoseDown(), [Moveset.LEFT, Moveset.LEFT, Moveset.LEFT, Moveset.DROP])
-    f3, i, h = f2.add_block(blocks.TNoseDown(), [Moveset.RIGHT, Moveset.RIGHT, Moveset.RIGHT, Moveset.DROP])
-    f4, i, h = f3.add_block(blocks.TNoseLeft(),
-                         [Moveset.RIGHT, Moveset.RIGHT,  Moveset.RIGHT, Moveset.RIGHT, Moveset.DROP])
-    f5, i, h = f4.add_block(blocks.IHorizontal(),
-                         [Moveset.LEFT, Moveset.LEFT, Moveset.LEFT, Moveset.DROP])
-    f6, i, h = f5.add_block(blocks.IHorizontal(), [Moveset.RIGHT, Moveset.RIGHT, Moveset.DROP])
-    f7, i, h = f6.add_block(blocks.TNoseDown(), [Moveset.DROP])
-    print f7, i
-    t, i, h = f3.add_block(blocks.TNoseLeft(), [Moveset.DROP])
-    print t
-    print t.get_hole_per_line()
-    print t.calc_hole_score()
-    print t.calc_hole_score_inverse()
-
-    f = Field().add_block(blocks.TNoseDown(), [Moveset.DROP])[0].add_block(blocks.TNoseLeft(), [Moveset.DROP])[0]
-    print f
-    f.get_blockades()
-    """
-    print Field().get_possible_movesets(blocks.IHorizontal())

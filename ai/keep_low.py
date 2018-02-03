@@ -44,9 +44,6 @@ class KeepLow:
             final_moveset.append(Moveset.DROP)
         try:
             field, vanished_lines, height = self._field.add_block(block, final_moveset)
-            # score = (self._f[0] * field.calc_hole_score() + self._f[1] * height + self._f[2] * field.get_blockades())
-            # if vanished_lines > 0 and self._f[3] != 0:
-            #    score /= self._f[3] * vanished_lines
             score = self._f[0] * field.calc_hole_score() + self._f[1] * height + self._f[2] * field.get_blockades() + \
                     self._f[3] * vanished_lines
             if score not in self._scores:
